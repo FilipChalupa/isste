@@ -44,13 +44,13 @@ script:
 
 env:
   global:
-    secure: "a9DX/AEQpuw0RQj0WCBsaFdz1z2Mv2eq4UVIBZnlToXqg7D9olSyhmwR03Vaq0ql/1ZzIvrnjC2sP+ClBCR7JHiFLP1MtvLbkApoe4Bit8HJ95iymsyDeqnFIsL0kasiln3BfaMWGKhDFJ3UAj5zTw01G29T8Be01gYy1+sXd96u1iznRQ+Yxf/JuQhJ4/dbuvbMoTcFGpMAiOiawqzg4bXyTOZaALmsx1ixKsWmFH/qmg7IsGwfoxDuGchqaaQRh2B7lKMBYSLrDBfTRKoNKmAIvRCgtS5sA/9pzMjxFuBvlGmbCf0/hpVg/vSt0Rq1o0qaNzybP0M9Uw5lVzvLE+o+HpbfDTesGQqLsMQYnFotEmrhOQ3flSShCWkLhprkccWsY87CcqEzt7dzc93xvm/UnaTffVqoxNSCPmoqY3GLZI5Rye8AakUYGfLnEKg1E1JJNFaWJDDjFlNkvdf6JgK1dakWkxTQ0IPwC0KmpXCLvKpPoDklFQOA7ZbCS5AtoOoe3PCaLLthAe8iHnVednaPw5c1TqBKEDFxo/BcUlugmPb87ycG+zjPd4tA70EasFsKcQBKE2X0IKK/VkxSmlD7TBZglIOCxGKR9TrzdLMfVGfHiMABqVZPfxoYi0PCQD2cAy85CNVwAO/6V7V0Wvg56zXCWJhfAZlED83ArLI=" # GH_TOKEN=xyz123
+    secure: "F6oVRfmtJOcZiCFtt+mGdTXCZGYmwooYhi1Rt6gLkiANu+TpvnZcfy3ELvmM8nkRXNJADKo7u+C61dvAVxiGWU+EJIthGBAAcsgrOwZwyu9vxbO2oFpRIwYApfbnj5cmrH3EZnUGzm+Wi2mxf2mEngUEcpD+6hmScIBGhDjvKd4UVSzPrLWO9U9wUyrvUjDraaM52LgOtZX4DExL2fkQ77dVt3TqtA4seyNqm+3SqCosqbP/1zXXKeALbEahUz2rxaAo7Ro7vJYLrQgahNgHQYmRAT1laSAmEqjeme6cXsI4rEcFirYvtpFVBQFo7kMhTz+wN/t5237CV6HiQUX9tN/TxZfkPqLGQNY+3j7ztvMn3fqW3zlMOjxEQJ60Dl7J93ZkfZDllxyLRf4Rp26WjhfT8MG58/kQyd+MbBc74PLAytl/QTJPMQMJBMUkuzbQkP9Fp72GfNDSNlRt0QLaSRB76fJLwmo6/vwyMyN9lla1FLG8AzQg1kgtSo/xwWeNEK/SKYZTJw10tZu+bKidA+sZu2yMvttCS4CBob8SlJdVCsJUsdYAFrRygT2tp22Pz/D0bYBlYb3lv3RkKHJh9RNnlw0gRu9n5KehVBpN4wU9uSWVWGCLTICSi3jnwuczVCE3cnbZCyfypjE3KQkqpSAkdG1U4bCOpscUMZUp4Bc=" # GH_TOKEN=xyz123
 
 after_success:
-  - GIT_REPO="https://$GH_TOKEN@github.com/Onset/mango-cli-example.git"
+  - GIT_REPO="https://$GH_TOKEN@github.com/Onset/isste.git"
   - cd dist
   - git init
-  - git config user.email "travis@example.com"
+  - git config user.email "ci@travis-ci.org"
   - git config user.name "Travis CI"
   - git add .
   - git commit -m "Deploy"
