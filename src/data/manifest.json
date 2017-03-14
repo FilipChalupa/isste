@@ -1,9 +1,9 @@
 {
-  "lang": "en",
+  "lang": "cs",
   "dir": "ltr",
-  "name": "Mango-cli example",
-  "description": "Sample project structure used at manGoweb",
-  "short_name": "Mango",
+  "name": "ISSTE",
+  "description": "Podpůrný web pro výuku na ISSTE",
+  "short_name": "ISSTE",
   "icons": [{
       "src": "../images/icons/36x36.png",
       "sizes": "36x36"
