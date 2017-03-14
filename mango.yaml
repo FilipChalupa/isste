@@ -5,7 +5,7 @@ styles:
   - src/styles/oldie.sass
   - src/styles/print.sass
 scripts:
-  - src/scripts/index.es6
+  - src/scripts/App.jsx
   #- src/serviceWorker.es6
 images:
   - src/images/**/*.{jpg,png}
@@ -15,19 +15,25 @@ sprites:
     name: false
 static:
   - src/fonts/**
-  - node_modules/lt-ie-9/lt-ie-9.min.js
-  - node_modules/jquery/dist/jquery.min.js
   - src/data/manifest.json
 templates:
   - src/templates/*.jade
 buildstamp:
   - dist/styles/*.css
-  - dist/scripts/index.js
+  - dist/scripts/App.js
 dependencies:
-  - lt-ie-9
   - normalize-scss
   - bourbon
-  - jquery
+  - material-ui
+  - react-tap-event-plugin
+  - react
+  - react-dom
+  - redux
+  - redux-thunk
+  - react-redux
+  - react-router
+  - react-router-dom
+  - react-router-redux
 data:
   manifest: src/data/manifest.json
 hooks:

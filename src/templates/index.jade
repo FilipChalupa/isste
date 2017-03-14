@@ -1,21 +1,30 @@
-extends layouts/default
-
-append vars
-	- var page = 'index'
+doctype html
+block vars
+	- var title = manifest.name
 	- var description = manifest.description
 
-block content
+html(lang=manifest.lang)
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width,initial-scale=1')
 
-	main.layout(role='main')
+		title=title
 
-		h1.appName= manifest.short_name
+		link(rel='manifest', href='data/manifest.json')
+		meta(name='theme-color', content=manifest.theme_color)
 
-		p= manifest.description
-		include parts/example
-		include parts/icons
+		meta(name='description', content=description)
 
-		section
-			include parts/samplecontent
+		link(rel='icon', type='image/png', href='./images/icons/36x36.png', sizes='36x36')
+
+		link(rel='stylesheet', href='styles/#{buildstamp}index.css', media='screen')
+		link(rel='stylesheet', href='styles/#{buildstamp}print.css', media='print')
 
 
+		//- Application init
+		script(src='scripts/#{buildstamp}App.js', defer)
 
+	body
+
+		div#app
