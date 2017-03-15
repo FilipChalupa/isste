@@ -7,11 +7,7 @@ import routes from './_routes'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import configureStore from './_store'
 
-//const store = configureStore() // Test
-import { createStore} from 'redux'
-import reducer from './reducers'
-
-const store = createStore(reducer)
+const store = configureStore()
 const history = syncHistoryWithStore(hashHistory, store)
 
 import injectTapEventPlugin from 'react-tap-event-plugin'

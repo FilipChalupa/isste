@@ -29,11 +29,10 @@ dependencies:
   - react
   - react-dom
   - redux
-  - redux-thunk
   - react-redux
-  - react-router
+  - react-router@^3.0.2
   - react-router-dom
-  - react-router-redux
+  - react-router-redux@^4.0.8
 data:
   manifest: src/data/manifest.json
 hooks:
