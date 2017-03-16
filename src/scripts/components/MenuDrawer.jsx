@@ -11,6 +11,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close'
 import {List, ListItem} from 'material-ui/List'
 import CameraIcon from 'material-ui/svg-icons/av/videocam'
 import InfoIcon from 'material-ui/svg-icons/action/info'
+import HomeIcon from 'material-ui/svg-icons/action/home'
 
 import * as MenuActions from '../actions/menu'
 
@@ -41,13 +42,21 @@ class MenuDrawer extends React.Component {
 					onRequestChange={this.handleChange}
 				>
 					<AppBar
-            title='Menu'
+            title={<span style={{cursor: 'pointer'}}>Menu</span>}
             iconElementLeft={<IconButton onTouchTap={this.handleClose}><NavigationClose /></IconButton>}
+						onTitleTouchTap={this.handleClose}
           />
+
+          <MenuItem
+						containerElement={<Link to={'/'} />}
+						onTouchTap={this.handleClose}
+						leftIcon={<HomeIcon />}
+						primaryText='Úvod'
+					/>
 
 					<List>
             <ListItem
-              primaryText="Kamery"
+              primaryText='Kamery'
 							leftIcon={<CameraIcon />}
               initiallyOpen={false}
               primaryTogglesNestedList={true}
@@ -59,9 +68,8 @@ class MenuDrawer extends React.Component {
 						containerElement={<Link to={'/how-to/'} />}
 						onTouchTap={this.handleClose}
 						leftIcon={<InfoIcon />}
-					>
-						Postupy
-					</MenuItem>
+						primaryText='Postupy'
+					/>
         </Drawer>
       </div>
     )
