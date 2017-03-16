@@ -10,6 +10,7 @@ import IconButton from 'material-ui/IconButton'
 import NavigationClose from 'material-ui/svg-icons/navigation/close'
 import {List, ListItem} from 'material-ui/List'
 import CameraIcon from 'material-ui/svg-icons/av/videocam'
+import InfoIcon from 'material-ui/svg-icons/action/info'
 
 import * as MenuActions from '../actions/menu'
 
@@ -55,14 +56,11 @@ class MenuDrawer extends React.Component {
           </List>
 
           <MenuItem
+						containerElement={<Link to={'/how-to/'} />}
 						onTouchTap={this.handleClose}
+						leftIcon={<InfoIcon />}
 					>
-						Menu Item
-					</MenuItem>
-          <MenuItem
-						onTouchTap={this.handleClose}
-					>
-						Menu Item 2
+						Postupy
 					</MenuItem>
         </Drawer>
       </div>
