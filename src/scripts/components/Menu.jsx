@@ -29,7 +29,7 @@ class Menu extends Component {
 
 function mapStateToProps(state) {
   return {
-    menu: state.menu
+    menu: state.menu,
   }
 }
 

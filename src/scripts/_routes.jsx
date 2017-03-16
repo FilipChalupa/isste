@@ -7,6 +7,6 @@ import CameraPage from './pages/CameraPage'
 export default (
   <Route path="/" component={Container}>
     <IndexRoute component={HomePage} />
-    <Route path="/camera" component={CameraPage} />
+    <Route path="/camera/:id/" component={CameraPage} />
   </Route>
 )

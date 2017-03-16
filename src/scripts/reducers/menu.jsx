@@ -5,7 +5,7 @@ const defaultState = {
 	title: 'ISSTE',
 }
 
-export default function project(state = defaultState, action) {
+export default function menu(state = defaultState, action) {
   switch (action.type) {
     case SET_OPEN_MENU_DRAWER:
       return Object.assign({}, state, { drawerOpen: action.payload })
