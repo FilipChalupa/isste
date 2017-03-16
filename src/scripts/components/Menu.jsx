@@ -9,15 +9,17 @@ import * as MenuActions from '../actions/menu'
 class Menu extends Component {
 	render() {
 		return (
-			<div>
+			<div
+				style={{
+					position: 'sticky',
+					top: 0,
+					zIndex: 10,
+				}}
+			>
 				<MenuDrawer
 					open={this.props.menu.drawerOpen}
 				/>
 				<AppBar
-					style={{
-						position: 'sticky',
-						top: 0,
-					}}
 					title={this.props.menu.title}
 					onLeftIconButtonTouchTap={() => this.props.setOpenMenuDrawer(true)}
 				/>
