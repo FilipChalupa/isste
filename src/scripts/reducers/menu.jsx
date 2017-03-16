@@ -10,8 +10,9 @@ export default function menu(state = defaultState, action) {
     case SET_OPEN_MENU_DRAWER:
       return Object.assign({}, state, { drawerOpen: action.payload })
 		case SET_MENU_TITLE:
-			document.title = action.payload
-      return Object.assign({}, state, { title: action.payload })
+			const title = action.payload || defaultState.title
+			document.title = title
+      return Object.assign({}, state, { title: title })
     default:
       return state
   }

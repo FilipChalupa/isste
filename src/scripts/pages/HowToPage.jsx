@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import {
   Step,
   Stepper,
@@ -9,11 +11,21 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table'
 
-export default class HowToPage extends Component {
+import * as MenuActions from '../actions/menu'
+
+class HowToPage extends Component {
 
 	state = {
     stepIndex: 0,
   }
+
+	componentDidMount() {
+		this.props.setMenuTitle('Postupy')
+	}
+
+	componentWillUnmount() {
+		this.props.setMenuTitle(null)
+	}
 
 	handleNext = () => {
     const {stepIndex} = this.state
@@ -158,3 +170,16 @@ export default class HowToPage extends Component {
 		)
   }
 }
+
+
+function mapStateToProps(state) {
+  return {
+		menu: state.menu,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(MenuActions, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HowToPage)
