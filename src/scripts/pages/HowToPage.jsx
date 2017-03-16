@@ -109,11 +109,14 @@ export default class HowToPage extends Component {
 		const {stepIndex} = this.state
 
 		return (
-			<div style={{margin: 'auto'}}>
+			<div style={{
+				margin: 'auto',
+				maxWidth: 640,
+			}}>
 				<Stepper
 					activeStep={stepIndex}
 					linear={false}
-					orientation="vertical"
+					orientation='vertical'
 				>
 					<Step>
 						<StepButton onTouchTap={() => this.setState({stepIndex: 0})}>
