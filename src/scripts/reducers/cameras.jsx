@@ -10,6 +10,14 @@ const defaultState = {
 	3: {
 		name: 'Kamera 3',
 		image: 'https://unsplash.it/1024/720?image=3',
+	},
+	4: {
+		name: 'Kamera 4',
+		image: 'https://unsplash.it/1024/720?image=4',
+	},
+	5: {
+		name: 'Kamera 5',
+		image: 'https://unsplash.it/1024/720?image=5',
 	}
 }
 
