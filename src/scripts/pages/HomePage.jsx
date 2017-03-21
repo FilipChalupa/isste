@@ -1,21 +1,20 @@
 import React, { Component } from 'react'
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card'
 
 export default class HomePage extends Component {
-  render() {
-    return (
+	render() {
+		return (
 			<div style={{
-				padding: '60px 15px 15px',
-				margin: '0 auto',
-				maxWidth: 480,
+				position: 'absolute',
+				top: 0,
+				left: 0,
+				right: 0,
+				bottom: 0,
+				backgroundColor: '#000000',
+				backgroundImage: 'url("images/intro.jpg")',
+				backgroundSize: 'cover',
+				backgroundPosition: 'center',
 			}}>
-				<Card style={{textAlign: 'center'}}>
-					<CardTitle title='ISSTE'/>
-					<CardText>
-						Tento web slouží jako podpůrný nástroj pro výuku Ele na <a href='http://www.isste.cz/www/script/main.php?ac=page&amp;id=10' rel='noopener' target='_blank'>ISSTE</a>.
-					</CardText>
-				</Card>
 			</div>
-    )
-  }
+		)
+	}
 }
