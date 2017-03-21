@@ -147,7 +147,7 @@ class HowToPage extends Component {
 						</StepButton>
 						<StepContent>
 							<p style={{margin: '15px 0'}}>
-								IP adresy PLC jsou ve tvaru <b style={{fontWeight: 'bold'}}>10.0.1.10<u>1</u></b>, kde poslední podtržená číslice odpovídá číslu PLC.
+								IP adresy PLC jsou ve tvaru <b style={{fontWeight: 'bold'}}>10.0.1.10<u>1</u></b>, kde poslední, podtržená číslice odpovídá číslu PLC.
 								<br />
 								Port zůstává výchozí <b style={{fontWeight:'bold'}}>61682</b>.
 							</p>
