@@ -2,7 +2,7 @@ import { SET_OPEN_MENU_DRAWER, SET_MENU_TITLE } from '../actions/menu'
 
 const defaultState = {
 	drawerOpen: false,
-	title: 'ISSTE',
+	title: 'ISŠTE',
 }
 
 export default function menu(state = defaultState, action) {

@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {
-  Step,
-  Stepper,
-  StepButton,
-  StepContent,
+	Step,
+	Stepper,
+	StepButton,
+	StepContent,
 } from 'material-ui/Stepper'
 import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
@@ -16,8 +16,8 @@ import * as MenuActions from '../actions/menu'
 class HowToPage extends Component {
 
 	state = {
-    stepIndex: 0,
-  }
+		stepIndex: 0,
+	}
 
 	componentDidMount() {
 		this.props.setMenuTitle('Postupy')
@@ -28,22 +28,22 @@ class HowToPage extends Component {
 	}
 
 	handleNext = () => {
-    const {stepIndex} = this.state
-    if (stepIndex < 2) {
-      this.setState({stepIndex: stepIndex + 1})
-    }
-  }
+		const {stepIndex} = this.state
+		if (stepIndex < 2) {
+			this.setState({stepIndex: stepIndex + 1})
+		}
+	}
 
-  handlePrev = () => {
-    const {stepIndex} = this.state
-    if (stepIndex > 0) {
-      this.setState({stepIndex: stepIndex - 1})
-    }
-  }
+	handlePrev = () => {
+		const {stepIndex} = this.state
+		if (stepIndex > 0) {
+			this.setState({stepIndex: stepIndex - 1})
+		}
+	}
 
 	renderStepActions(step) {
-    return (
-      <div style={{margin: '12px 0'}}>
+		return (
+			<div style={{margin: '12px 0'}}>
 				{step < 2 && (
 					<RaisedButton
 						label="Další"
@@ -54,17 +54,17 @@ class HowToPage extends Component {
 						style={{marginRight: 12}}
 					/>
 				)}
-        {step > 0 && (
-          <FlatButton
-            label="Předchozí"
-            disableTouchRipple={true}
-            disableFocusRipple={true}
-            onTouchTap={this.handlePrev}
-          />
-        )}
-      </div>
-    )
-  }
+				{step > 0 && (
+					<FlatButton
+						label="Předchozí"
+						disableTouchRipple={true}
+						disableFocusRipple={true}
+						onTouchTap={this.handlePrev}
+					/>
+				)}
+			</div>
+		)
+	}
 
 	renderVPNTable() {
 		return (
@@ -117,7 +117,7 @@ class HowToPage extends Component {
 		)
 	}
 
-  render() {
+	render() {
 		const {stepIndex} = this.state
 
 		return (
@@ -168,18 +168,18 @@ class HowToPage extends Component {
 				</Stepper>
 			</div>
 		)
-  }
+	}
 }
 
 
 function mapStateToProps(state) {
-  return {
+	return {
 		menu: state.menu,
-  }
+	}
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(MenuActions, dispatch)
+	return bindActionCreators(MenuActions, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HowToPage)

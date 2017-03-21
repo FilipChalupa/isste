@@ -1,9 +1,9 @@
 {
   "lang": "cs",
   "dir": "ltr",
-  "name": "ISSTE",
-  "description": "Podpůrný web pro výuku na ISSTE",
-  "short_name": "ISSTE",
+  "name": "ISŠTE",
+  "description": "Podpůrný web pro výuku na ISŠTE",
+  "short_name": "ISŠTE",
   "icons": [{
       "src": "../images/icons/36x36.png",
       "sizes": "36x36"
