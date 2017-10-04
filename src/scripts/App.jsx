@@ -17,9 +17,9 @@ injectTapEventPlugin()
 
 const muiTheme = getMuiTheme({
 	palette: {
-    primary1Color: red600,
-    primary2Color: red800,
-    pickerHeaderColor: red600,
+		primary1Color: red600,
+		primary2Color: red800,
+		pickerHeaderColor: red600,
 	}
 })
 
@@ -32,8 +32,8 @@ const App = () => (
 )
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('app')
+	<App />,
+	document.getElementById('app')
 )
 
 export default App
