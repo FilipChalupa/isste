@@ -62,7 +62,7 @@ class MenuDrawer extends React.Component {
 						primaryText='Podmínky'
 					/>
 
-					<List>
+					{/*<List>
 						<ListItem
 							primaryText='Kamery'
 							leftIcon={<CameraIcon />}
@@ -70,7 +70,7 @@ class MenuDrawer extends React.Component {
 							primaryTogglesNestedList={true}
 							nestedItems={this.cameras()}
 						/>
-					</List>
+					</List>*/}
 
 					<MenuItem
 						containerElement={<Link to={'/how-to/'} />}
