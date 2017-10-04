@@ -160,7 +160,11 @@ class HowToPage extends Component {
 						</StepButton>
 						<StepContent>
 							<p style={{margin: '15px 0'}}>
-								Aktuální obraz z kamer je možné zobrazit na tomto webu zvolením kamery v levém menu.
+								Aktuální obraz z kamery je možné zobrazit na adrese <a href="http://10.0.1.201" target="_blank" rel="noopener"><b style={{fontWeight: 'bold'}}>10.0.1.20<u>1</u></b></a>, kde poslední číslice odpovídá číslu kamery. Podobně jako u adres PLC.
+								<br />
+								Video funguje pouze v prohlížeči Internet Explorer.
+								<br />
+								Přístupové údaje (uživatel a heslo) vám sdělí učitel.
 							</p>
 							{this.renderStepActions(2)}
 						</StepContent>
